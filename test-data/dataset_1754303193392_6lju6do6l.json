@@ -1,0 +1,178 @@
+{
+  "id": "dataset_1754303193392_6lju6do6l",
+  "name": "smoke-test-data",
+  "description": "Pre-generated data for smoke tests",
+  "created": "2025-08-04T10:26:33.392Z",
+  "data": {
+    "users": [
+      {
+        "id": "e52399fa-babf-4014-8acd-fbab757bfac2",
+        "username": "Precious.Bailey",
+        "email": "Solon_Schuppe81@gmail.com",
+        "password": "TestPassword123!",
+        "firstName": "D'angelo",
+        "lastName": "Koss",
+        "role": "user"
+      },
+      {
+        "id": "b282ce92-76de-4659-932b-c9fae75b833c",
+        "username": "Taya.Lesch",
+        "email": "Daniela76@hotmail.com",
+        "password": "TestPassword123!",
+        "firstName": "Royal",
+        "lastName": "Breitenberg",
+        "role": "user"
+      }
+    ],
+    "documents": [
+      {
+        "id": "de034a12-8bda-49b4-9e70-fa8a7e8199f6",
+        "name": "alter_depereo_delego.docx",
+        "type": "docx",
+        "content": "Title: adamo suasoria sunt sustineo\n\nAbstract:\nAccendo verbera testimonium asperiores coma perferendis. Armarium atrocitas ustilo clam numquam. Cunctatio vaco suadeo cibo advoco avarus.\n\nSection 1: Introduction\nUltra virtus admoveo nihil denique acer corrumpo cupio peccatus spectaculum. Tergum cui thalassinus varietas celebrer vox ultio suus constans. Ustilo vis a acceptus combibo vulnero arcesso aspicio tempora aegrus.\nDelicate abstergo terga thalassinus architecto acervus tempus caecus. Defluo carus minus uberrime crapula. Tristis correptius adhaero itaque defendo surgo.\n\nSection 2: Methodology\nTunc delicate magnam solvo deinde quia. Tabella creber autem cerno. Argentum tepidus cattus antiquus.\nCupiditate sordeo solutio cohaero baiulus brevis animadverto adfero. Callide calco quibusdam. Tergum supplanto colo conventus autus videlicet libero totidem conscendo thermae.\n\nSection 3: Results\nSumma vero thymbra. Caterva deputo cupio currus aestas. Tametsi thema creber thema demens supplanto auditor.\nTrans trepide auditor accusator succedo conor. Tenuis vivo vapulus appono theologus statim. Usitas tardus aliquid comprehendo cupiditas a patria.\n\nConclusion:\nCopiose crux demo nobis approbo xiphias dignissimos depromo. Clementia theologus claustrum subiungo. Verecundia coaegresco valetudo vindico asporto.",
+        "size": 3768099,
+        "uploadDate": "2025-07-25T21:36:36.282Z",
+        "status": "ready",
+        "metadata": {
+          "author": "Billie Wolf",
+          "version": "1.12.1",
+          "keywords": [
+            "comedo",
+            "pel",
+            "averto",
+            "stultus",
+            "caries"
+          ]
+        }
+      },
+      {
+        "id": "744e4d35-f860-4954-8151-005183f4a87a",
+        "name": "tertius_apto_recusandae.txt",
+        "type": "txt",
+        "content": "Quis sapiente sapiente. Conduco cunctatio pel vilicus argentum auctus arma summisse vestrum. Impedit commodi arto succedo sustineo vitium.\nSumptus vos amor tempora ars. Iste non video damno deporto sophismata quod aperte considero. Verto aliqua aequitas cupio bibo eius labore demitto.\nCapto bis sollicito tyrannus. Thesaurus stabilis beatus talio subiungo creber ullam eum varietas tracto. Tracto aptus dens arcesso.\nSophismata testimonium somniculosus sum valeo ara. Comparo addo sto tendo. Praesentium vitae clamo stipes adicio.",
+        "size": 656358,
+        "uploadDate": "2025-07-29T20:48:34.000Z",
+        "status": "ready",
+        "metadata": {
+          "author": "Genevieve Smith",
+          "version": "4.11.15",
+          "keywords": [
+            "adsidue",
+            "quia",
+            "quas",
+            "ab",
+            "pax"
+          ]
+        }
+      },
+      {
+        "id": "975e448a-f069-4b28-a8e6-a0c5f5ad7f9c",
+        "name": "vicissitudo_vir_vulariter.pdf",
+        "type": "pdf",
+        "content": "Title: antepono voluptatibus calco audax\n\nAbstract:\nEx cimentarius collum collum cenaculum optio bis. Civitas atavus caelum voveo damno tribuo. Solio sustineo crinis crudelis unde tollo tubineus.\n\nSection 1: Introduction\nContigo dens voco magnam. Aestus ipsum infit ventosus corpus venia aqua alveus voluptate. Officiis admoneo admitto communis coruscus tendo unde in commodo cultura.\nApto tamdiu utor. Stillicidium contego absconditus temptatio cupio. Chirographum omnis communis video allatus.\n\nSection 2: Methodology\nMinus aduro utique caelestis thermae thorax ad quis pecco aeternus. Arbitro delectus alter molestiae culpo occaecati tamisium valetudo crastinus. Dolor expedita amiculum adipisci quasi.\nAdsidue theologus caries thymbra coadunatio deleo vicissitudo verbera aperio. Quaerat quia sit conatus amplus molestias cogito. Maiores pel adipisci voro.\n\nSection 3: Results\nCultura sono auxilium. Qui theologus impedit avaritia. Torrens sum vinco umbra vix delego deorsum occaecati vilitas.\nPatrocinor placeat laborum angustus culpa. Tertius tendo ater surculus. Demonstro vereor debilito aedificium convoco auditor arcesso bene utroque totidem.\n\nConclusion:\nVis angustus pauper conatus trado solutio curo sumptus. Acceptus cicuta pauper degusto. Asper vilicus vis vomer adsum taedium paulatim alienus.",
+        "size": 10374004,
+        "uploadDate": "2025-07-21T21:36:32.095Z",
+        "status": "ready",
+        "metadata": {
+          "author": "Kerry Corwin",
+          "version": "4.1.15",
+          "keywords": [
+            "conicio",
+            "vox",
+            "valeo",
+            "vigilo",
+            "tactus"
+          ]
+        }
+      },
+      {
+        "id": "601afa60-eb73-41af-89d2-e8fb1441a38c",
+        "name": "clarus_consuasor_viscus.pdf",
+        "type": "pdf",
+        "content": "Title: solutio virga alo celo\n\nAbstract:\nTruculenter torqueo claudeo sol curiositas. Tactus numquam conitor. Claro tenus curriculum civitas celer.\n\nSection 1: Introduction\nTurbo assentator caste omnis voluptates. Capto sursum casso. Distinctio desolo summa rerum cinis absque pariatur turba depono terminatio.\nCrastinus velociter vel suppellex cinis conforto. Tergum abeo ago decet casso. Uxor sumptus capitulus vespillo volubilis nesciunt censura coerceo quibusdam termes.\n\nSection 2: Methodology\nSolum curriculum consequuntur quibusdam tondeo depulso. Denuncio despecto debilito. Tergo alveus acceptus tero ultio caecus.\nAdvoco capitulus degero somnus blandior delinquo volutabrum dolores. Sophismata eligendi causa tredecim aperiam astrum. Creber ambitus cribro tollo.\n\nSection 3: Results\nUtor vitae tum amplus libero. Utique consectetur velit. Reprehenderit uter ab.\nAd inventore atque officia abscido. Temporibus uter despecto denuo adiuvo. Tripudio usitas trepide desidero absorbeo confugo taedium verbum claudeo.\n\nConclusion:\nVado credo provident patria. Rerum deduco sublime arx autus. Desidero tenuis aurum vulgivagus communis tyrannus.",
+        "size": 8579028,
+        "uploadDate": "2025-08-01T15:10:27.056Z",
+        "status": "ready",
+        "metadata": {
+          "author": "Amber Will",
+          "version": "7.0.4",
+          "keywords": [
+            "eius",
+            "delego",
+            "testimonium",
+            "antiquus",
+            "vapulus"
+          ]
+        }
+      },
+      {
+        "id": "62bd39b7-4b5a-40e8-b4d7-afded14366fe",
+        "name": "creator_vobis_officia.pdf",
+        "type": "pdf",
+        "content": "Title: desino cilicium ascisco deduco\n\nAbstract:\nError illum abstergo clibanus asporto. Capillus tristis suggero laudantium substantia beneficium studio quas sunt argumentum. Virgo culpo sed.\n\nSection 1: Introduction\nTui aperte desino attonbitus admitto vehemens cena adnuo deserunt termes. Appono creta causa et veniam ultio tubineus. Appello animi utilis ager.\nAttonbitus cunctatio triumphus volutabrum abeo laborum. Cribro colligo thema supra thesis volup utpote pectus certus. Modi virgo decor vinculum nam vero credo.\n\nSection 2: Methodology\nUndique tametsi ipsam. Tum velum dedecor ambulo tribuo uredo carmen. Sed crapula cohors varietas pax utpote.\nQuia tum pectus. Sublime vinco vacuus assentator spoliatio adduco texo tonsor. Eius tersus dicta vulgaris.\n\nSection 3: Results\nDefluo universe venia solitudo tibi abbas. Trepide adhaero officiis autus cultura confugo voluptatibus synagoga. Infit balbus attonbitus summisse una speciosus convoco amo quasi audax.\nClementia tabella depromo voco. Averto cibo contego adulatio ceno cubitum quia qui. Toties communis aestas tepesco et rerum adimpleo tactus veniam studio.\n\nConclusion:\nCelebrer defungo tabesco mollitia. Ambulo velociter cado condico conatus comminor uberrime cubicularis. Aro synagoga cursim quam amaritudo.",
+        "size": 6176430,
+        "uploadDate": "2025-07-11T10:09:35.708Z",
+        "status": "ready",
+        "metadata": {
+          "author": "Stanley Wehner",
+          "version": "6.15.4",
+          "keywords": [
+            "tonsor",
+            "auctus",
+            "cattus",
+            "comprehendo",
+            "thalassinus"
+          ]
+        }
+      }
+    ],
+    "features": [
+      {
+        "id": "90faf383-2112-4545-b528-ef03de3309dd",
+        "title": "quantify driver",
+        "content": "Feature: synthesize array\n  As a user\n  I want to synthesize array\n  So that I can We need to synthesize the primary IB pixel!\n\n  Scenario: hack haptic array 1\n    Given I am on the contigo page\n    When I compress the consuasor\n    And I calculate \"ceno angelus\"\n    Then I should see \"Ver umquam suppellex.\"\n    And the amor should be digital\n\n  Scenario: compress 1080p array 2\n    Given I am on the totam page\n    When I quantify the cogo\n    And I back up \"copiose autus\"\n    Then I should see \"Velit crebro amplitudo pauper delectatio coruscus.\"\n    And the amaritudo should be virtual\n\n  Scenario: reboot cross-platform array 3\n    Given I am on the adipisci page\n    When I reboot the articulus\n    And I override \"solutio earum\"\n    Then I should see \"Creator surculus acervus sublime basium bardus viscus deserunt arbustum.\"\n    And the suggero should be mobile\n\n",
+        "category": "generated",
+        "tags": [
+          "@api",
+          "@smoke"
+        ],
+        "scenarios": 3,
+        "createdDate": "2025-07-29T11:09:07.380Z",
+        "lastModified": "2025-08-03T21:25:31.069Z",
+        "author": "Lonnie Glover"
+      },
+      {
+        "id": "f5b05f8a-4cf7-448d-9020-06f2b84107f9",
+        "title": "navigate monitor",
+        "content": "Feature: override hard drive\n  As a user\n  I want to override hard drive\n  So that I can I'll transmit the multi-byte CSS card, that should microchip the USB matrix!\n\n  Scenario: transmit online hard drive 1\n    Given I am on the assumenda page\n    When I connect the addo\n    And I hack \"anser socius\"\n    Then I should see \"Comis creber cognatus.\"\n    And the cohaero should be cross-platform\n\n  Scenario: synthesize haptic hard drive 2\n    Given I am on the corroboro page\n    When I navigate the arbustum\n    And I transmit \"crur tepesco\"\n    Then I should see \"Aliquid censura somniculosus commodo.\"\n    And the absorbeo should be bluetooth\n\n  Scenario: compress cross-platform hard drive 3\n    Given I am on the causa page\n    When I quantify the vaco\n    And I override \"saepe ascit\"\n    Then I should see \"Crastinus tabesco vacuus benevolentia causa placeat denuo.\"\n    And the coruscus should be cross-platform\n\n",
+        "category": "generated",
+        "tags": [
+          "@integration",
+          "@api",
+          "@integration",
+          "@integration"
+        ],
+        "scenarios": 3,
+        "createdDate": "2025-08-02T22:59:19.121Z",
+        "lastModified": "2025-08-03T13:40:10.279Z",
+        "author": "Barry Kessler"
+      },
+      {
+        "id": "fb0fe170-d284-4124-9d99-5e62ce70d753",
+        "title": "synthesize sensor",
+        "content": "Feature: hack transmitter\n  As a user\n  I want to hack transmitter\n  So that I can You can't navigate the capacitor without backing up the optical PNG bandwidth!\n\n  Scenario: quantify redundant transmitter 1\n    Given I am on the ea page\n    When I reboot the quo\n    And I synthesize \"ambulo acidus\"\n    Then I should see \"Vulgaris aer patior turba.\"\n    And the asporto should be multi-byte\n\n  Scenario: navigate online transmitter 2\n    Given I am on the venia page\n    When I compress the valde\n    And I navigate \"officiis volo\"\n    Then I should see \"Administratio quam vulticulus vacuus explicabo adipiscor summa suspendo alter.\"\n    And the amissio should be auxiliary\n\n  Scenario: generate bluetooth transmitter 3\n    Given I am on the creta page\n    When I bypass the aequus\n    And I copy \"balbus trucido\"\n    Then I should see \"Bibo ver sustineo.\"\n    And the allatus should be mobile\n\n",
+        "category": "generated",
+        "tags": [
+          "@integration",
+          "@integration",
+          "@smoke",
+          "@smoke"
+        ],
+        "scenarios": 3,
+        "createdDate": "2025-07-31T22:47:50.110Z",
+        "lastModified": "2025-08-04T02:15:53.460Z",
+        "author": "Courtney Franecki"
+      }
+    ]
+  }
+}
