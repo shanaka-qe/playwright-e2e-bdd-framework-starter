@@ -2,6 +2,8 @@
 test-results/
 playwright-report/
 temp/
+reports/*/html-report/
+reports/*/artifacts/
 
 # System files
 .DS_Store
@@ -14,17 +16,36 @@ node_modules/
 .env
 .env.local
 .env.test
+.env.staging
+.env.production
 
 # Logs
 *.log
 npm-debug.log*
+playwright-debug.log
 
 # IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+.project
+.settings/
 
 # Coverage reports
 coverage/
 *.lcov
+
+# Test data (dynamic generated files)
+test-data/dataset_*.json
+test-data/files/*.pdf
+test-data/files/*.docx
+test-data/files/*.txt
+
+# BDD Generated files
+.features-gen/
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
