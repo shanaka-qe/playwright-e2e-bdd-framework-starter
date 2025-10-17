@@ -230,25 +230,28 @@ tests/
 │   │   └── 📄 user-management-api.spec.ts
 │   └── 📁 integration/          # Admin integration workflows
 │       └── 📄 admin-workflow.spec.ts
-├── 📁 mcp-server/               # MCP Server test suites  
-│   ├── 📁 api/                  # MCP API tests
-│   │   ├── 📄 models.spec.ts
-│   │   ├── 📄 text-generation.spec.ts
-│   │   └── 📄 embeddings.spec.ts
-│   └── 📁 integration/          # MCP integration workflows
-│       └── 📄 ai-workflow.spec.ts
-└── 📁 cross-app/                # Cross-application workflows
-    ├── 📄 document-processing.spec.ts
-    ├── 📄 user-onboarding.spec.ts
-    └── 📄 system-integration.spec.ts
+├── 📁 api/                      # API test suites
+│   ├── 📄 mcp-fastapi.spec.ts   # MCP Server API tests
+│   ├── 📄 qa-api.spec.ts        # QA API tests
+│   └── 📄 qa-api-test-env.spec.ts
+├── 📁 e2e/                      # End-to-end test suites
+│   └── 📄 test-env-comprehensive.spec.ts
+├── 📁 ui/                       # UI test suites
+│   ├── 📄 navigation.spec.ts
+│   ├── 📄 smoke-tests.spec.ts
+│   └── 📄 model-*.spec.ts
+├── 📁 comprehensive/            # Comprehensive workflow tests
+│   └── 📄 e2e-workflows.spec.ts
+└── 📁 utils/                    # Test utilities
+    └── 📄 test-helpers.ts
 ```
 
 ### **Test Organization Benefits**
 
 1. **Clear Ownership**: Each application team owns their test directory
-2. **Test Type Separation**: UI, API, and Integration tests are clearly separated  
-3. **Cross-Application Testing**: Dedicated space for end-to-end workflows
-4. **Scalability**: Easy to add new applications or test types
+2. **Test Type Separation**: UI, API, E2E, and Integration tests are clearly separated
+3. **Scalability**: Easy to add new applications or test types
+4. **Flexibility**: Mix of traditional Playwright tests and BDD scenarios
 
 ---
 
@@ -275,13 +278,7 @@ features/
 │   │   └── 📄 system-monitoring.feature
 │   ├── 📁 api/
 │   └── 📁 integration/
-├── 📁 mcp-server/               # MCP Server BDD scenarios
-│   ├── 📁 api/
-│   │   └── 📄 api-endpoints.feature
-│   └── 📁 integration/
-├── 📁 cross-app/                # Cross-application scenarios
-│   └── 📄 document-to-feature.feature
-├── 📁 shared/                   # Shared BDD scenarios
+├── 📁 shared/                   # Shared BDD components
 └── 📁 steps/                    # Step definitions
     ├── 📄 fixtures.ts           # Test fixtures for BDD
     ├── 📁 shared/
@@ -324,8 +321,9 @@ reports/
 │   └── 📄 junit-results.xml
 ├── 📁 adminapp/                 # AdminApp-specific reports
 ├── 📁 mcp-server/               # MCP Server-specific reports  
+├── 📁 webapp/                   # WebApp-specific reports
 └── 📁 combined/                 # Combined application reports
-    ├── 📄 html-report/          # Unified HTML report
+    ├── 📁 html-report/          # Unified HTML report
     ├── 📄 results.json          # Combined JSON results
     ├── 📄 junit-results.xml     # Combined JUnit format
     └── 📄 artifacts/            # Test artifacts (screenshots, videos)

@@ -7,6 +7,17 @@
 
 > **Enterprise-grade test automation framework for multi-application testing with Playwright and BDD support**
 
+**Author:** Shanaka Fernando  
+**LinkedIn:** https://www.linkedin.com/in/shanaka-qe/
+
+## 📢 About This Project
+
+**This is a sample starter project** derived from a real-world, large-scale E2E workflow automation framework that I developed for one of my enterprise clients. It has been generalized and sanitized to serve as a professional template for the QA community. The original project handled complex multi-application workflows, AI-powered test generation, and comprehensive cross-platform testing in a production environment.
+
+This starter template preserves the enterprise-grade architecture, best practices, and patterns that proved successful in real-world scenarios, making it an ideal foundation for building robust test automation frameworks.
+
+---
+
 A comprehensive, scalable, and maintainable end-to-end testing framework built with Playwright and Playwright-BDD. Designed for testing multiple applications (WebApp, AdminApp, API Server) with a professional architecture suitable for enterprise environments.
 
 ## ✨ Features
@@ -104,11 +115,25 @@ npm run test:mcp:api
 
 ```
 playwright-e2e-bdd-framework/
-├── config/                      # Test configuration
+├── 📁 .github/workflows/        # CI/CD Pipelines
+│   ├── pr-tests.yml             # Pull request tests
+│   ├── main-tests.yml           # Main branch tests
+│   ├── scheduled-tests.yml      # Scheduled regression
+│   ├── bdd-tests.yml            # BDD feature tests
+│   └── dependency-update.yml    # Weekly updates
+│
+├── 📁 config/                   # Test Configuration
 │   ├── applications/            # App-specific configs
+│   │   ├── webapp.config.ts
+│   │   ├── adminapp.config.ts
+│   │   └── mcp-server.config.ts
 │   ├── environments/            # Environment configs
+│   │   ├── dev.config.ts
+│   │   ├── staging.config.ts
+│   │   └── prod.config.ts
 │   └── playwright.config.ts     # Main Playwright config
-├── src/                         # Source code
+│
+├── 📁 src/                      # Source Code
 │   ├── applications/            # Application-specific code
 │   │   ├── webapp/              # WebApp pages & APIs
 │   │   ├── adminapp/            # AdminApp pages & APIs
@@ -120,23 +145,78 @@ playwright-e2e-bdd-framework/
 │   │   ├── utils/               # Utility functions
 │   │   └── reporters/           # Custom reporters
 │   └── data/                    # Test data management
-├── tests/                       # Test files
+│
+├── 📁 tests/                    # Test Files (Traditional)
 │   ├── webapp/                  # WebApp tests
+│   │   ├── ui/
+│   │   ├── api/
+│   │   └── integration/
 │   ├── adminapp/                # AdminApp tests
-│   ├── mcp-server/              # MCP Server tests
-│   └── cross-app/               # Cross-application workflows
-├── features/                    # BDD feature files
+│   │   ├── ui/
+│   │   ├── api/
+│   │   └── integration/
+│   ├── api/                     # API tests (includes MCP)
+│   ├── e2e/                     # End-to-end tests
+│   ├── ui/                      # UI tests
+│   ├── comprehensive/           # Comprehensive workflows
+│   └── utils/                   # Test utilities
+│
+├── 📁 features/                 # BDD Feature Files (Gherkin)
 │   ├── webapp/                  # WebApp scenarios
+│   │   ├── ui/
+│   │   ├── api/
+│   │   └── *.feature
 │   ├── adminapp/                # AdminApp scenarios
+│   │   ├── ui/
+│   │   ├── api/
+│   │   └── *.feature
+│   ├── shared/                  # Shared components
 │   └── steps/                   # Step definitions
-├── support/                     # Support files
+│       ├── fixtures.ts
+│       ├── shared/
+│       └── webapp/
+│
+├── 📁 support/                  # Support Files
 │   ├── api/                     # API helpers
 │   ├── pages/                   # Page objects
 │   ├── components/              # Reusable components
-│   └── helpers/                 # Helper functions
-├── documentation/               # Comprehensive docs
-└── reports/                     # Test reports
+│   ├── helpers/                 # Helper functions
+│   └── workflows/               # Workflow classes
+│
+├── 📁 documentation/            # Comprehensive Documentation
+│   ├── configuration-guide.md   # Setup & config
+│   ├── test-execution.md        # Running tests
+│   ├── bdd-testing.md           # BDD guide
+│   ├── ci-cd-setup.md           # CI/CD setup
+│   ├── development-workflow.md  # Best practices
+│   ├── api-reference.md         # API docs
+│   ├── folder-structure.md      # Project org
+│   └── troubleshooting.md       # Debugging
+│
+├── 📁 reports/                  # Test Reports
+│   ├── webapp/
+│   ├── adminapp/
+│   ├── mcp-server/
+│   └── combined/
+│
+├── 📄 .gitlab-ci.yml            # GitLab CI pipeline
+├── 📄 Jenkinsfile               # Jenkins pipeline
+├── 📄 env.example               # Environment template
+├── 📄 package.json              # Dependencies & scripts
+└── 📄 tsconfig.json             # TypeScript config
 ```
+
+### Key Folders
+
+| Folder | Purpose |
+|--------|---------|
+| `.github/workflows/` | GitHub Actions CI/CD workflows |
+| `config/` | All configuration files (apps, environments) |
+| `src/` | Core framework code and application-specific implementations |
+| `tests/` | Traditional Playwright tests (flexible, technical) |
+| `features/` | BDD Gherkin scenarios (business-readable) |
+| `support/` | Reusable test utilities and helpers |
+| `documentation/` | Comprehensive guides and references |
 
 ## 🧪 Testing Approaches
 

@@ -12,7 +12,7 @@
     "test:legacy:regression": "NODE_ENV=test npx playwright test --project=regression-chromium",
     "test:api": "NODE_ENV=test npx playwright test --project=api-tests",
     "test:comprehensive": "NODE_ENV=test npx playwright test tests/comprehensive/",
-    "test:workflows": "NODE_ENV=test npx playwright test tests/comprehensive/e2e-workflows.spec.ts",
+    "test:workflows": "NODE_ENV=test npx playwright test tests/comprehensive/",
     "test:cross-browser": "CROSS_BROWSER=true NODE_ENV=test npx playwright test --project=smoke-chromium --project=firefox --project=webkit",
     "test:mobile": "MOBILE_TESTS=true NODE_ENV=test npx playwright test --project=mobile-chrome --project=mobile-safari",
     "test:visual": "NODE_ENV=test npx playwright test --project=visual-regression",
