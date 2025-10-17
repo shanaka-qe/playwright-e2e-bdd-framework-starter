@@ -11,16 +11,42 @@ A comprehensive, scalable, and maintainable end-to-end testing framework built w
 
 ## ✨ Features
 
+### Core Testing Capabilities
 - 🎯 **Multi-Application Support** - Separate configurations for WebApp, AdminApp, and API testing
 - 🥒 **BDD Integration** - Gherkin feature files with Playwright-BDD for behavior-driven development
-- 🌍 **Environment Management** - Development, Staging, and Production configurations
-- 🔄 **Parallel Execution** - Optimized test performance with configurable workers
-- 📊 **Comprehensive Reporting** - HTML, JSON, JUnit, and custom reports
 - 🧪 **Test Organization** - UI, API, Integration, and Cross-Application test suites
 - 🎨 **Page Object Model** - Maintainable test architecture with reusable components
-- 🔧 **Type-Safe** - Full TypeScript support with strong typing
-- 🚀 **CI/CD Ready** - Pre-configured for GitHub Actions, Jenkins, and other CI platforms
-- 📱 **Cross-Browser Testing** - Chrome, Firefox, Safari, and Mobile support
+- 📱 **Cross-Browser Testing** - Chrome, Firefox, Safari, and Mobile (iOS/Android) support
+- 🔍 **Visual Regression Testing** - Screenshot comparison for UI consistency
+- ⚡ **Performance Testing** - Built-in performance monitoring and metrics
+
+### Advanced Features
+- 🌍 **Environment Management** - Development, Staging, and Production configurations with easy switching
+- 🔄 **Parallel Execution & Sharding** - Optimized test performance with configurable workers and test sharding
+- 🔐 **Authentication & Authorization** - Role-based testing with authentication helpers
+- 📊 **Comprehensive Reporting** - HTML, JSON, JUnit, Cucumber, and custom reports
+- 🏗️ **Test Data Management** - Factories, builders, seeders, and data isolation
+- 🔧 **Type-Safe** - Full TypeScript support with strong typing and IntelliSense
+- ♿ **Accessibility Testing** - Built-in accessibility validation helpers
+- 🧩 **Component Reusability** - Shared components (Header, Modal, Sidebar) across applications
+
+### CI/CD & DevOps
+- 🚀 **CI/CD Ready** - Pre-configured pipelines for:
+  - **GitHub Actions** (5 workflows: PR tests, main tests, scheduled tests, BDD tests, dependency updates)
+  - **GitLab CI** (Complete pipeline with parallel execution)
+  - **Jenkins** (Jenkinsfile with matrix builds)
+- ⏰ **Scheduled Testing** - Daily regression tests with automatic issue creation on failure
+- 🔄 **Automated Dependency Updates** - Weekly security audits and dependency updates with auto-PR creation
+- 🐳 **Docker Support** - Containerized test execution for consistent environments
+- 📦 **Artifact Management** - Automatic upload of test results, screenshots, and videos
+
+### Developer Experience
+- 📚 **Comprehensive Documentation** - Detailed guides for configuration, testing, BDD, troubleshooting, and CI/CD
+- 🎛️ **Environment Template** - `.env.example` with all configuration options documented
+- 🔍 **Debug Mode** - Headed mode, slow-mo, and Playwright Inspector support
+- 🛡️ **Enhanced Security** - No hardcoded credentials, comprehensive .gitignore, secret management
+- 🧪 **Test Isolation** - Automatic test data cleanup and isolation between test runs
+- 📝 **Code Generation** - Playwright Codegen support for rapid test creation
 
 ## 📋 Prerequisites
 
@@ -193,6 +219,51 @@ Environment configurations in `config/environments/`:
 - `staging.config.ts` - Staging environment
 - `prod.config.ts` - Production environment
 
+## 🚀 CI/CD Integration
+
+The framework includes pre-configured CI/CD pipelines for multiple platforms:
+
+### GitHub Actions (Recommended)
+
+Five workflows are included in `.github/workflows/`:
+
+1. **PR Tests** - Fast smoke tests on pull requests
+2. **Main Tests** - Comprehensive tests with sharding and cross-browser testing
+3. **Scheduled Tests** - Daily regression tests with automatic issue creation
+4. **BDD Tests** - Feature file validation and testing
+5. **Dependency Updates** - Weekly security audits and automated updates
+
+**Quick Setup:**
+```bash
+# Workflows are ready to use - just push to GitHub
+git push origin main
+
+# Configure secrets for environment testing (optional)
+# Settings → Secrets → Actions → New repository secret
+```
+
+### GitLab CI
+
+Complete pipeline configuration in `.gitlab-ci.yml`:
+
+```yaml
+# Automatic parallel execution
+# Stages: Setup → Lint → Test → Report
+# Push to GitLab to start pipeline
+```
+
+### Jenkins
+
+Jenkinsfile with matrix builds:
+
+```groovy
+// Configure in Jenkins:
+// New Item → Pipeline → Pipeline from SCM
+// Script Path: Jenkinsfile
+```
+
+**📖 Full Guide:** [CI/CD Setup Documentation](documentation/ci-cd-setup.md)
+
 ## 📚 Documentation
 
 Comprehensive documentation is available in the `/documentation` folder:
@@ -200,6 +271,7 @@ Comprehensive documentation is available in the `/documentation` folder:
 - [Configuration Guide](documentation/configuration-guide.md) - Complete configuration reference
 - [Test Execution](documentation/test-execution.md) - Running and managing tests
 - [BDD Testing](documentation/bdd-testing.md) - Behavior-driven development guide
+- [CI/CD Setup](documentation/ci-cd-setup.md) - GitHub Actions, GitLab CI, Jenkins configuration
 - [Development Workflow](documentation/development-workflow.md) - Best practices
 - [API Reference](documentation/api-reference.md) - Framework API documentation
 - [Troubleshooting](documentation/troubleshooting.md) - Common issues and solutions

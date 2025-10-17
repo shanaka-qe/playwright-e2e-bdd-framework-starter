@@ -1,0 +1,123 @@
+name: BDD Feature Tests
+
+on:
+  push:
+    paths:
+      - 'features/**'
+      - 'steps/**'
+      - '.github/workflows/bdd-tests.yml'
+  pull_request:
+    paths:
+      - 'features/**'
+      - 'steps/**'
+  workflow_dispatch:
+
+jobs:
+  bdd-tests:
+    name: BDD Tests - ${{ matrix.application }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        application: [webapp, adminapp, mcp-server]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate BDD tests
+        run: npm run bdd:generate
+
+      - name: Run BDD tests for ${{ matrix.application }}
+        run: |
+          case "${{ matrix.application }}" in
+            "webapp")
+              npm run bdd:webapp
+              ;;
+            "adminapp")
+              npm run bdd:adminapp
+              ;;
+            "mcp-server")
+              npm run bdd:mcp
+              ;;
+          esac
+        env:
+          NODE_ENV: test
+          HEADLESS: true
+          CI: true
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bdd-results-${{ matrix.application }}
+          path: |
+            reports/
+            test-results/
+            .features-gen/
+          retention-days: 14
+
+      - name: Upload Cucumber Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-report-${{ matrix.application }}
+          path: reports/**/cucumber-report.html
+          retention-days: 14
+          if-no-files-found: ignore
+
+  bdd-critical:
+    name: Critical BDD Scenarios
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate BDD tests
+        run: npm run bdd:generate
+
+      - name: Run critical BDD scenarios
+        run: npm run bdd:critical
+        env:
+          NODE_ENV: test
+          HEADLESS: true
+          CI: true
+
+      - name: Upload critical test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bdd-critical-results
+          path: |
+            reports/
+            test-results/
+          retention-days: 30
+

@@ -1,0 +1,154 @@
+# GitLab CI/CD Configuration
+# This file provides GitLab CI/CD pipeline configuration
+# For GitHub users, see .github/workflows/ directory instead
+
+variables:
+  NODE_VERSION: "18"
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "0"
+  npm_config_cache: "$CI_PROJECT_DIR/.npm"
+  CYPRESS_CACHE_FOLDER: "$CI_PROJECT_DIR/.cache/Cypress"
+
+stages:
+  - setup
+  - lint
+  - test
+  - report
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+    - .cache/
+
+# Install dependencies
+install:
+  stage: setup
+  image: node:${NODE_VERSION}
+  script:
+    - npm ci
+    - npx playwright install --with-deps
+  artifacts:
+    paths:
+      - node_modules/
+    expire_in: 1 hour
+
+# TypeScript and code quality checks
+lint:
+  stage: lint
+  image: node:${NODE_VERSION}
+  needs: [install]
+  script:
+    - npx tsc --noEmit
+  only:
+    - merge_requests
+    - main
+    - develop
+
+# Smoke tests (fast feedback)
+smoke-tests:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.54.1-focal
+  needs: [install]
+  script:
+    - npm run test:smoke
+  artifacts:
+    when: always
+    paths:
+      - reports/
+      - test-results/
+      - playwright-report/
+    expire_in: 7 days
+  only:
+    - merge_requests
+
+# Regression tests (comprehensive)
+regression-tests:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.54.1-focal
+  needs: [install]
+  parallel:
+    matrix:
+      - APPLICATION: [webapp, adminapp, mcp-server]
+  script:
+    - |
+      case "$APPLICATION" in
+        "webapp")
+          npm run test:webapp:ui
+          npm run test:webapp:api
+          ;;
+        "adminapp")
+          npm run test:adminapp:ui
+          npm run test:adminapp:api
+          ;;
+        "mcp-server")
+          npm run test:mcp:api
+          ;;
+      esac
+  artifacts:
+    when: always
+    paths:
+      - reports/
+      - test-results/
+    expire_in: 14 days
+  only:
+    - main
+    - schedules
+
+# Cross-browser tests
+cross-browser-tests:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.54.1-focal
+  needs: [install]
+  parallel:
+    matrix:
+      - BROWSER: [chromium, firefox, webkit]
+  script:
+    - BROWSER=$BROWSER npm run test:smoke
+  artifacts:
+    when: always
+    paths:
+      - reports/
+      - test-results/
+    expire_in: 7 days
+  only:
+    - main
+
+# BDD tests
+bdd-tests:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.54.1-focal
+  needs: [install]
+  script:
+    - npm run bdd:generate
+    - npm run test:bdd:all
+  artifacts:
+    when: always
+    paths:
+      - reports/
+      - test-results/
+      - .features-gen/
+    expire_in: 14 days
+  only:
+    - merge_requests
+    - main
+
+# Generate and publish reports
+publish-reports:
+  stage: report
+  image: node:${NODE_VERSION}
+  needs:
+    - smoke-tests
+    - regression-tests
+  script:
+    - echo "Generating test report summary"
+    - ls -la reports/
+  artifacts:
+    when: always
+    paths:
+      - reports/
+    expire_in: 30 days
+  only:
+    - main
+    - schedules
+
