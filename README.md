@@ -268,14 +268,45 @@ Jenkinsfile with matrix builds:
 
 Comprehensive documentation is available in the `/documentation` folder:
 
-- [Configuration Guide](documentation/configuration-guide.md) - Complete configuration reference
-- [Test Execution](documentation/test-execution.md) - Running and managing tests
-- [BDD Testing](documentation/bdd-testing.md) - Behavior-driven development guide
-- [CI/CD Setup](documentation/ci-cd-setup.md) - GitHub Actions, GitLab CI, Jenkins configuration
-- [Development Workflow](documentation/development-workflow.md) - Best practices
-- [API Reference](documentation/api-reference.md) - Framework API documentation
-- [Troubleshooting](documentation/troubleshooting.md) - Common issues and solutions
-- [Folder Structure](documentation/folder-structure.md) - Project organization details
+### 🎯 Essential Guides
+- **[Configuration Guide](documentation/configuration-guide.md)** - Environment setup, application configs, environment variables
+- **[Test Execution](documentation/test-execution.md)** - Running tests, debugging, understanding results
+- **[BDD Testing](documentation/bdd-testing.md)** - Gherkin features, step definitions, best practices
+
+### 🚀 Advanced Guides
+- **[CI/CD Setup](documentation/ci-cd-setup.md)** - GitHub Actions, GitLab CI, Jenkins pipelines
+- **[Development Workflow](documentation/development-workflow.md)** - Best practices, code standards, Git workflow
+- **[API Reference](documentation/api-reference.md)** - Framework APIs, utilities, custom components
+- **[Folder Structure](documentation/folder-structure.md)** - Project organization, file locations
+- **[Troubleshooting](documentation/troubleshooting.md)** - Common issues, solutions, debugging
+
+### 📖 Quick Reference
+
+| I want to... | Read this |
+|-------------|-----------|
+| Set up the framework | [Configuration Guide](documentation/configuration-guide.md) |
+| Run tests | [Test Execution Guide](documentation/test-execution.md) |
+| Write BDD features | [BDD Testing Guide](documentation/bdd-testing.md) |
+| Set up CI/CD | [CI/CD Setup Guide](documentation/ci-cd-setup.md) |
+| Debug failures | [Troubleshooting Guide](documentation/troubleshooting.md) |
+| Understand the code | [API Reference](documentation/api-reference.md) |
+
+### 🎓 Learning Paths
+
+**For Beginners:**
+```
+Main README → Configuration Guide → Test Execution Guide → BDD Testing
+```
+
+**For Test Developers:**
+```
+Development Workflow → API Reference → BDD Testing → Troubleshooting
+```
+
+**For DevOps Engineers:**
+```
+Configuration Guide → CI/CD Setup → Test Execution → Troubleshooting
+```
 
 ## 🤝 Contributing
 

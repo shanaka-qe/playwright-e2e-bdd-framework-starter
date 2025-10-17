@@ -10,16 +10,57 @@ The Playwright E2E Testing Framework follows a professional, enterprise-grade fo
 
 ```
 playwright-e2e-tests/
+├── 📁 .github/                   # GitHub Actions CI/CD Workflows ✨ NEW
 ├── 📁 config/                    # Configuration Management
 ├── 📁 src/                       # Source Code Organization  
 ├── 📁 tests/                     # Test Files by Application
 ├── 📁 features/                  # BDD Feature Files
 ├── 📁 reports/                   # Test Execution Reports
 ├── 📁 documentation/             # Framework Documentation
+├── 📄 .gitlab-ci.yml             # GitLab CI Pipeline ✨ NEW
+├── 📄 Jenkinsfile                # Jenkins Pipeline ✨ NEW
+├── 📄 env.example                # Environment Variables Template ✨ NEW
 ├── 📄 package.json               # Project Dependencies & Scripts
 ├── 📄 tsconfig.json              # TypeScript Configuration
-└── 📄 .env.*                     # Environment Variables
+└── 📄 .gitignore                 # Git Ignore Patterns (Enhanced)
 ```
+
+---
+
+## 📁 `/.github/` - GitHub Actions CI/CD ✨ NEW
+
+**Purpose**: GitHub Actions workflow configurations for automated testing and continuous integration.
+
+```
+.github/
+└── 📁 workflows/                 # GitHub Actions Workflows
+    ├── 📄 pr-tests.yml           # Pull request smoke tests
+    ├── 📄 main-tests.yml         # Main branch comprehensive tests
+    ├── 📄 scheduled-tests.yml    # Daily regression tests
+    ├── 📄 bdd-tests.yml          # BDD feature tests
+    └── 📄 dependency-update.yml  # Weekly dependency updates
+```
+
+### **Workflow Overview**
+
+| Workflow | Trigger | Purpose | Duration |
+|----------|---------|---------|----------|
+| `pr-tests.yml` | Pull Requests | Fast smoke tests | ~20 min |
+| `main-tests.yml` | Push to main | Comprehensive testing with sharding | ~45 min |
+| `scheduled-tests.yml` | Daily at 2 AM UTC | Regression testing | ~60 min |
+| `bdd-tests.yml` | Feature file changes | BDD scenario validation | ~30 min |
+| `dependency-update.yml` | Weekly Monday 9 AM | Security audits & updates | ~15 min |
+
+**Key Features:**
+- Automatic test execution on commits
+- Parallel test execution with sharding
+- Cross-browser testing matrix
+- Automatic artifact upload
+- GitHub issue creation on failures
+- Scheduled regression testing
+- Automated dependency updates
+
+**📖 Full Documentation**: See [CI/CD Setup Guide](ci-cd-setup.md)
 
 ---
 
@@ -298,14 +339,79 @@ reports/
 
 ```
 documentation/
-├── 📄 README.md                 # Main framework overview
+├── 📄 README.md                 # Documentation index
 ├── 📄 folder-structure.md       # This document
 ├── 📄 configuration-guide.md    # Configuration reference
 ├── 📄 test-execution.md         # Test running guide
 ├── 📄 bdd-testing.md           # BDD development guide
+├── 📄 ci-cd-setup.md           # CI/CD integration guide ✨ NEW
 ├── 📄 development-workflow.md   # Best practices
 ├── 📄 api-reference.md         # API documentation
 └── 📄 troubleshooting.md       # Common issues & solutions
+```
+
+---
+
+## 📄 Root Level CI/CD Files ✨ NEW
+
+### `.gitlab-ci.yml` - GitLab CI Pipeline
+
+**Purpose**: Complete GitLab CI/CD pipeline configuration with caching and parallel execution.
+
+**Key Features:**
+- 4-stage pipeline (Setup → Lint → Test → Report)
+- Parallel execution matrix for applications
+- Docker-based test execution
+- Cached dependencies for faster builds
+- Artifact management and reporting
+
+**Stages:**
+1. **Setup**: Install dependencies and Playwright browsers
+2. **Lint**: TypeScript validation
+3. **Test**: Smoke, regression, cross-browser, and BDD tests
+4. **Report**: Generate and publish test reports
+
+---
+
+### `Jenkinsfile` - Jenkins Pipeline
+
+**Purpose**: Jenkins declarative pipeline with matrix builds and parallel execution.
+
+**Key Features:**
+- Docker agent configuration
+- Parallel application testing
+- Matrix cross-browser testing
+- HTML report publishing
+- JUnit integration
+- Artifact archiving
+
+**Stages:**
+1. **Setup**: Dependencies and browser installation
+2. **Lint**: Code quality checks
+3. **Smoke Tests**: Fast feedback on PRs
+4. **Parallel Tests**: WebApp, AdminApp, MCP Server
+5. **Cross-Browser Tests**: Multi-browser matrix
+6. **BDD Tests**: Feature validation
+
+---
+
+### `env.example` - Environment Template ✨ NEW
+
+**Purpose**: Complete environment variable template with safe defaults for quick setup.
+
+**Sections:**
+- **WebApp Configuration**: Base URL, auth, features
+- **AdminApp Configuration**: Admin settings, security
+- **MCP Server Configuration**: AI providers, services
+- **Database Configuration**: Connection details
+- **Test Configuration**: Browser, execution settings
+- **CI/CD Configuration**: Pipeline settings
+- **Environment URLs**: Dev, Staging, Production
+
+**Usage:**
+```bash
+cp env.example .env
+# Edit .env with your settings
 ```
 
 ---
@@ -316,6 +422,10 @@ documentation/
 
 | What you need | Where to look |
 |---------------|---------------|
+| CI/CD workflows | `.github/workflows/` ✨ |
+| GitLab CI config | `.gitlab-ci.yml` ✨ |
+| Jenkins pipeline | `Jenkinsfile` ✨ |
+| Environment template | `env.example` ✨ |
 | Application config | `config/applications/` |
 | Environment settings | `config/environments/` |
 | Page objects | `src/applications/{app}/pages/` |
