@@ -1,0 +1,52 @@
+{
+    "compilerOptions": {
+        "target": "ES2022",
+        "module": "commonjs",
+        "lib": [
+            "ES2022"
+        ],
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "outDir": "./dist",
+        "rootDir": ".",
+        "strict": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "types": [
+            "node",
+            "@playwright/test"
+        ],
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "@support/*": [
+                "./support/*"
+            ],
+            "@config/*": [
+                "./config/*"
+            ]
+        }
+    },
+    "include": [
+        "src/**/*",
+        "tests/**/*",
+        "features/**/*",
+        "support/**/*",
+        "config/**/*",
+        "steps/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "reports",
+        "test-results",
+        ".features-gen"
+    ]
+}

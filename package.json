@@ -1,6 +1,7 @@
 {
   "name": "playwright-e2e-bdd-framework",
   "version": "1.0.0",
+  "author": "Shanaka Fernando",
   "description": "Enterprise-grade E2E Test Framework - Comprehensive end-to-end testing with Playwright and BDD support for multi-application testing",
   "main": "index.js",
   "scripts": {
@@ -73,5 +74,17 @@
     "playwright-bdd": "^8.3.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/playwright-e2e-bdd-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/playwright-e2e-bdd-framework/issues"
+  },
+  "homepage": "https://github.com/yourusername/playwright-e2e-bdd-framework#readme"
 }

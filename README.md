@@ -20,6 +20,114 @@ This starter template preserves the enterprise-grade architecture, best practice
 
 A comprehensive, scalable, and maintainable end-to-end testing framework built with Playwright and Playwright-BDD. Designed for testing multiple applications (WebApp, AdminApp, API Server) with a professional architecture suitable for enterprise environments.
 
+## 🏗️ Framework Architecture
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         PLAYWRIGHT E2E BDD FRAMEWORK                         │
+│                         Multi-App Testing Architecture                       │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+                                 ┌──────────────┐
+                                 │   CI/CD      │
+                                 │ ─────────    │
+                                 │  GitHub      │
+                                 │  GitLab      │
+                                 │  Jenkins     │
+                                 └──────┬───────┘
+                                        │
+                          ┌─────────────▼─────────────┐
+                          │   Test Execution Layer    │
+                          │                           │
+                          │  ┌─────────────────────┐  │
+                          │  │  Playwright Runner  │  │
+                          │  └─────────────────────┘  │
+                          └─────────────┬─────────────┘
+                                        │
+                 ┌──────────────────────┼──────────────────────┐
+                 │                      │                      │
+        ┌────────▼────────┐    ┌───────▼────────┐    ┌───────▼────────┐
+        │  Traditional    │    │  BDD (Gherkin) │    │  API Tests     │
+        │  Playwright     │    │  Feature Files │    │  Direct        │
+        │  Tests (.spec)  │    │  (.feature)    │    │  Integration   │
+        └────────┬────────┘    └─────────┬──────┘    └──────────┬─────┘
+                 │                       │                      │
+                 │              ┌────────▼────────┐             │
+                 │              │  Step Defs      │             │
+                 │              │  (BDD->Code)    │             │
+                 │              └────────┬────────┘             │
+                 │                       │                      │
+                 └───────────────────────┼──────────────────────┘
+                                         │
+                          ┌──────────────▼──────────────┐
+                          │    Page Object Layer        │
+                          │                             │
+                          │  ┌────────┐  ┌──────────┐   │
+                          │  │WebApp  │  │AdminApp  │   │
+                          │  │Pages   │  │Pages     │   │
+                          │  └────────┘  └──────────┘   │
+                          │                             │
+                          │  ┌─────────────────────┐    │
+                          │  │  Shared Components  │    │
+                          │  │  (Header, Sidebar)  │    │
+                          │  └─────────────────────┘    │
+                          └──────────────┬──────────────┘
+                                         │
+                          ┌──────────────▼──────────────┐
+                          │   Application APIs          │
+                          │                             │
+                          │  ┌────────┐  ┌──────────┐   │
+                          │  │WebApp  │  │AdminApp  │   │
+                          │  │API     │  │API       │   │
+                          │  └────────┘  └──────────┘   │
+                          └──────────────┬──────────────┘
+                                         │
+                          ┌──────────────▼──────────────┐
+                          │   Core Framework Layer      │
+                          │                             │
+                          │  • Config Management        │
+                          │  • Test Data Factories      │
+                          │  • Authentication Helpers   │
+                          │  • Navigation Helpers       │
+                          │  • Custom Reporters         │
+                          │  • Database Utilities       │
+                          └──────────────┬──────────────┘
+                                         │
+                 ┌───────────────────────┼───────────────────────┐
+                 │                       │                       │
+        ┌────────▼────────┐    ┌────────▼────────┐    ┌────────▼────────┐
+        │  Configuration  │    │  Test Data      │    │  Reporting      │
+        │                 │    │                 │    │                 │
+        │  • Environment  │    │  • Builders     │    │  • HTML         │
+        │  • Application  │    │  • Factories    │    │  • JSON         │
+        │  • Playwright   │    │  • Seeders      │    │  • JUnit        │
+        └─────────────────┘    └─────────────────┘    │  • Custom       │
+                                                      └─────────────────┘
+
+                          ┌──────────────────────────┐
+                          │   Applications Under     │
+                          │        Test              │
+                          │                          │
+                          │  🌐 WebApp               │
+                          │  ⚙️  AdminApp            │
+                          │  🔌 API/MCP Server       │
+                          └──────────────────────────┘
+
+Legend:
+  → Data/Control Flow
+  ┌─┐ Layer/Component
+  • Feature/Capability
+```
+
+### Architecture Highlights
+
+- **Multi-Layer Design**: Separation of concerns with dedicated layers for tests, pages, APIs, and core utilities
+- **Dual Testing Approach**: Support for both traditional Playwright tests and BDD Gherkin scenarios
+- **Reusable Components**: Shared page objects, helpers, and utilities across all applications
+- **Flexible Configuration**: Environment-based and application-specific configurations
+- **CI/CD Integration**: Built-in pipelines for GitHub Actions, GitLab CI, and Jenkins
+- **Comprehensive Reporting**: Multiple report formats for different stakeholders
+
 ## ✨ Features
 
 ### Core Testing Capabilities
@@ -59,6 +167,10 @@ A comprehensive, scalable, and maintainable end-to-end testing framework built w
 - 🧪 **Test Isolation** - Automatic test data cleanup and isolation between test runs
 - 📝 **Code Generation** - Playwright Codegen support for rapid test creation
 
+## ⚠️ Important Note
+
+**This is a reference architecture and starter template**, not a complete application. The example test files demonstrate patterns and structure but require your application implementation to run. See [SETUP.md](SETUP.md) for details on adapting this template for your project.
+
 ## 📋 Prerequisites
 
 - **Node.js** 18+ 
@@ -69,6 +181,8 @@ A comprehensive, scalable, and maintainable end-to-end testing framework built w
 ## 🚀 Quick Start
 
 > 💡 **New to this framework?** Check out our [Getting Started Guide](GETTING_STARTED.md) for a detailed walkthrough!
+> 
+> 📘 **Setting up for your project?** See [SETUP.md](SETUP.md) for important information about using this template.
 
 ### 1. Clone the Repository
 
