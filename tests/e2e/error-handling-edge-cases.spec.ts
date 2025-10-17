@@ -13,11 +13,11 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../../framework/pages/HomePage';
-import { DocumentHubPage } from '../../framework/pages/DocumentHubPage';
-import { FeatureGeneratorPage } from '../../framework/pages/FeatureGeneratorPage';
-import { GlobalChatPage } from '../../framework/pages/GlobalChatPage';
-import { testDataFactory } from '../../framework/data/TestDataFactory';
+import { HomePage } from '../../src/core/base/pages/HomePage';
+import { DocumentHubPage } from '../../src/core/base/pages/DocumentHubPage';
+import { FeatureGeneratorPage } from '../../src/core/base/pages/FeatureGeneratorPage';
+import { GlobalChatPage } from '../../src/core/base/pages/GlobalChatPage';
+import { testDataFactory } from '../../src/applications/shared/api/builders/TestDataFactory';
 import path from 'path';
 import fs from 'fs';
 

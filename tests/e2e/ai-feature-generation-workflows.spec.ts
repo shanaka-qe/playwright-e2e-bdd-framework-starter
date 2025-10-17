@@ -10,9 +10,9 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../../framework/pages/HomePage';
-import { FeatureGeneratorPage, FeatureFile, ChatMessage } from '../../framework/pages/FeatureGeneratorPage';
-import { testDataFactory } from '../../framework/data/TestDataFactory';
+import { HomePage } from '../../src/core/base/pages/HomePage';
+import { FeatureGeneratorPage, FeatureFile, ChatMessage } from '../../src/core/base/pages/FeatureGeneratorPage';
+import { testDataFactory } from '../../src/applications/shared/api/builders/TestDataFactory';
 
 test.describe('AI Feature Generation Workflows', () => {
   let homePage: HomePage;

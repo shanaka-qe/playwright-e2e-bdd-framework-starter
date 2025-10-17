@@ -68,6 +68,8 @@ A comprehensive, scalable, and maintainable end-to-end testing framework built w
 
 ## 🚀 Quick Start
 
+> 💡 **New to this framework?** Check out our [Getting Started Guide](GETTING_STARTED.md) for a detailed walkthrough!
+
 ### 1. Clone the Repository
 
 ```bash
@@ -390,11 +392,18 @@ Configuration Guide → CI/CD Setup → Test Execution → Troubleshooting
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please follow these guidelines:
+We welcome contributions! Whether it's:
+- 🐛 Bug fixes
+- ✨ New features  
+- 📝 Documentation improvements
+- 🧪 Test coverage enhancements
 
+Please read our [Contributing Guide](CONTRIBUTING.md) to get started.
+
+### Quick Contribution Steps:
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
@@ -408,6 +417,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - BDD support via [Playwright-BDD](https://github.com/vitalets/playwright-bdd)
 - Inspired by enterprise testing best practices
 
+## 📚 Additional Resources
+
+- 📖 [Getting Started Guide](GETTING_STARTED.md) - Quick setup in 10 minutes
+- 🤝 [Contributing Guide](CONTRIBUTING.md) - How to contribute
+- 📂 [Full Documentation](documentation/) - Comprehensive guides
+- 🐛 [Troubleshooting](documentation/troubleshooting.md) - Common issues and solutions
+
 ## 📞 Support
 
 - 📧 **Email**: your-qa-team@example.com
@@ -418,6 +434,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Made with ❤️ for the QA Community**
+
+*This framework is derived from a real-world enterprise E2E testing solution. Star ⭐ this repo if you find it helpful!*
 
 *Enterprise-grade • Scalable • Maintainable • Open Source*
 

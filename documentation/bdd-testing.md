@@ -156,7 +156,7 @@ Feature: User Management
       | Role     | User               |
     And I click "Create User"
     Then I should see "User created successfully"
-    And "john.doe@test.com" should appear in the user list
+    And "john.doe@example.com" should appear in the user list
 ```
 
 #### **MCP Server Features**
@@ -663,9 +663,9 @@ BDD reports include:
 Scenario: Create multiple users
   When I create users with the following details:
     | Name         | Email              | Role  |
-    | John Doe     | john@test.com      | User  |
-    | Jane Smith   | jane@test.com      | Admin |
-    | Bob Johnson  | bob@test.com       | User  |
+    | John Doe     | john@example.com   | User  |
+    | Jane Smith   | jane@example.com   | Admin |
+    | Bob Johnson  | bob@example.com    | User  |
   Then all users should be created successfully
 ```
 

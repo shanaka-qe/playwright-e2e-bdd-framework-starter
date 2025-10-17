@@ -5,7 +5,7 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { AdminApiPage, LogEntry } from '../../../framework/pages/adminapp/AdminApiPage';
+import { AdminApiPage, LogEntry } from '../../../src/applications/adminapp/pages/adminapp/AdminApiPage';
 
 test.describe('Admin App API Tests', () => {
   let apiPage: AdminApiPage;

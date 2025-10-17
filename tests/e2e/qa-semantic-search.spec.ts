@@ -11,10 +11,10 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../../framework/pages/HomePage';
-import { GlobalChatPage, QAChatMessage } from '../../framework/pages/GlobalChatPage';
-import { DocumentHubPage } from '../../framework/pages/DocumentHubPage';
-import { testDataFactory } from '../../framework/data/TestDataFactory';
+import { HomePage } from '../../src/core/base/pages/HomePage';
+import { GlobalChatPage, QAChatMessage } from '../../src/core/base/pages/GlobalChatPage';
+import { DocumentHubPage } from '../../src/core/base/pages/DocumentHubPage';
+import { testDataFactory } from '../../src/applications/shared/api/builders/TestDataFactory';
 import path from 'path';
 import fs from 'fs';
 

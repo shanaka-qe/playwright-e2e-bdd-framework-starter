@@ -6,8 +6,8 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { AdminDashboardPage } from '../../../framework/pages/adminapp/AdminDashboardPage';
-import { AdminApiPage } from '../../../framework/pages/adminapp/AdminApiPage';
+import { AdminDashboardPage } from '../../../src/applications/adminapp/pages/adminapp/AdminDashboardPage';
+import { AdminApiPage } from '../../../src/applications/adminapp/pages/adminapp/AdminApiPage';
 
 test.describe('Admin App Smoke Tests', () => {
   let dashboardPage: AdminDashboardPage;

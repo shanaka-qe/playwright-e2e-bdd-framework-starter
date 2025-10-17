@@ -6,9 +6,9 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../../framework/pages/HomePage';
-import { DocumentHubPage, DocumentItem } from '../../framework/pages/DocumentHubPage';
-import { testDataFactory } from '../../framework/data/TestDataFactory';
+import { HomePage } from '../../src/core/base/pages/HomePage';
+import { DocumentHubPage, DocumentItem } from '../../src/core/base/pages/DocumentHubPage';
+import { testDataFactory } from '../../src/applications/shared/api/builders/TestDataFactory';
 import path from 'path';
 import fs from 'fs';
 

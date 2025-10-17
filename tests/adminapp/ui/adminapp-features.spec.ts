@@ -5,8 +5,8 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { AdminDashboardPage } from '../../../framework/pages/adminapp/AdminDashboardPage';
-import { AdminApiPage, LogEntry } from '../../../framework/pages/adminapp/AdminApiPage';
+import { AdminDashboardPage } from '../../../src/applications/adminapp/pages/adminapp/AdminDashboardPage';
+import { AdminApiPage, LogEntry } from '../../../src/applications/adminapp/pages/adminapp/AdminApiPage';
 
 test.describe('Admin App Core Features', () => {
   let dashboardPage: AdminDashboardPage;
