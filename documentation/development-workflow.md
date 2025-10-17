@@ -60,7 +60,7 @@ npm run framework:validate
 **VS Code Extensions:**
 - Playwright Test for VS Code
 - TypeScript and JavaScript Language Features
-- Gherkin (Cucumber) syntax highlighting
+- Gherkin syntax highlighting for .feature files
 - ESLint
 - Prettier
 
@@ -71,7 +71,7 @@ npm run framework:validate
   "editor.formatOnSave": true,
   "playwright.showTrace": true,
   "files.associations": {
-    "*.feature": "cucumber"
+    "*.feature": "gherkin"
   }
 }
 ```

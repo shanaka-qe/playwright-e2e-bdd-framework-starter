@@ -35,7 +35,7 @@ A comprehensive, scalable, and maintainable end-to-end testing framework built w
 - 🌍 **Environment Management** - Development, Staging, and Production configurations with easy switching
 - 🔄 **Parallel Execution & Sharding** - Optimized test performance with configurable workers and test sharding
 - 🔐 **Authentication & Authorization** - Role-based testing with authentication helpers
-- 📊 **Comprehensive Reporting** - HTML, JSON, JUnit, Cucumber, and custom reports
+- 📊 **Comprehensive Reporting** - HTML, JSON, JUnit, Playwright-BDD, and custom reports
 - 🏗️ **Test Data Management** - Factories, builders, seeders, and data isolation
 - 🔧 **Type-Safe** - Full TypeScript support with strong typing and IntelliSense
 - ♿ **Accessibility Testing** - Built-in accessibility validation helpers

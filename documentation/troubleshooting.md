@@ -419,7 +419,7 @@ await page.screenshot({ path: 'debug-after-login.png' });
 ```bash
 playwright-bdd: Feature files not found
 No step definitions found for: "Given I am on the login page"
-Cucumber expression compilation failed
+Playwright-BDD expression compilation failed
 ```
 
 **Solutions:**
