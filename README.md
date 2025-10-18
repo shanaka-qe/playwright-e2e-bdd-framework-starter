@@ -169,7 +169,7 @@ Legend:
 
 ## ⚠️ Important Note
 
-**This is a reference architecture and starter template**, not a complete application. The example test files demonstrate patterns and structure but require your application implementation to run. See [SETUP.md](SETUP.md) for details on adapting this template for your project.
+**This is a reference architecture and starter template**, not a complete application. The example test files demonstrate patterns and structure but require your application implementation to run. See [Setup Guide](documentation/setup.md) for details on adapting this template for your project.
 
 ## 📋 Prerequisites
 
@@ -182,7 +182,7 @@ Legend:
 
 > 💡 **New to this framework?** Check out our [Getting Started Guide](GETTING_STARTED.md) for a detailed walkthrough!
 > 
-> 📘 **Setting up for your project?** See [SETUP.md](SETUP.md) for important information about using this template.
+> 📘 **Setting up for your project?** See [Setup Guide](documentation/setup.md) for important information about using this template.
 
 ### 1. Clone the Repository
 
@@ -299,7 +299,11 @@ playwright-e2e-bdd-framework/
 │   ├── helpers/                 # Helper functions
 │   └── workflows/               # Workflow classes
 │
+├── 📁 test-data/                # Test Data Files
+│   └── files/                   # Static test data files
+│
 ├── 📁 documentation/            # Comprehensive Documentation
+│   ├── setup.md                 # Project setup guide
 │   ├── configuration-guide.md   # Setup & config
 │   ├── test-execution.md        # Running tests
 │   ├── bdd-testing.md           # BDD guide
@@ -332,6 +336,7 @@ playwright-e2e-bdd-framework/
 | `tests/` | Traditional Playwright tests (flexible, technical) |
 | `features/` | BDD Gherkin scenarios (business-readable) |
 | `support/` | Reusable test utilities and helpers |
+| `test-data/` | Static test data files |
 | `documentation/` | Comprehensive guides and references |
 
 ## 🧪 Testing Approaches
@@ -465,6 +470,7 @@ Jenkinsfile with matrix builds:
 Comprehensive documentation is available in the `/documentation` folder:
 
 ### 🎯 Essential Guides
+- **[Setup Guide](documentation/setup.md)** - Adapting this template for your project
 - **[Configuration Guide](documentation/configuration-guide.md)** - Environment setup, application configs, environment variables
 - **[Test Execution](documentation/test-execution.md)** - Running tests, debugging, understanding results
 - **[BDD Testing](documentation/bdd-testing.md)** - Gherkin features, step definitions, best practices
@@ -480,6 +486,7 @@ Comprehensive documentation is available in the `/documentation` folder:
 
 | I want to... | Read this |
 |-------------|-----------|
+| Adapt this template | [Setup Guide](documentation/setup.md) |
 | Set up the framework | [Configuration Guide](documentation/configuration-guide.md) |
 | Run tests | [Test Execution Guide](documentation/test-execution.md) |
 | Write BDD features | [BDD Testing Guide](documentation/bdd-testing.md) |

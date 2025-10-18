@@ -17,6 +17,7 @@ playwright-e2e-tests/
 ├── 📁 features/                  # BDD Feature Files
 ├── 📁 reports/                   # Test Execution Reports
 ├── 📁 documentation/             # Framework Documentation
+├── 📁 test-data/                 # Test Data Files
 ├── 📄 .gitlab-ci.yml             # GitLab CI Pipeline ✨ NEW
 ├── 📄 Jenkinsfile                # Jenkins Pipeline ✨ NEW
 ├── 📄 env.example                # Environment Variables Template ✨ NEW
@@ -186,9 +187,10 @@ src/
 │   └── 📁 reporters/            # Custom reporters
 │       └── 📄 CustomReporter.ts
 └── 📁 data/                     # Test data management
-    ├── 📁 test-data/            # Static test data files
     ├── 📄 TestDataSeeder.ts     # Data seeding utilities
     ├── 📄 DatabaseCleaner.ts    # Cleanup utilities
+    ├── 📄 TestDataIsolation.ts  # Test data isolation
+    ├── 📄 TestDataManager.ts    # Test data management
     └── 📄 ChromaDBSeeder.ts     # Vector DB seeding
 ```
 
@@ -338,6 +340,7 @@ reports/
 ```
 documentation/
 ├── 📄 README.md                 # Documentation index
+├── 📄 setup.md                  # Project setup guide
 ├── 📄 folder-structure.md       # This document
 ├── 📄 configuration-guide.md    # Configuration reference
 ├── 📄 test-execution.md         # Test running guide
@@ -452,7 +455,7 @@ cp env.example .env
 1. **Clean up old reports**: Regularly clear `reports/` directories
 2. **Update documentation**: Keep documentation current with code changes
 3. **Review configurations**: Ensure environment configs match infrastructure
-4. **Organize test data**: Clean up `src/data/test-data/` periodically
+4. **Organize test data**: Clean up `test-data/` periodically
 
 ### **Best Practices**
 
