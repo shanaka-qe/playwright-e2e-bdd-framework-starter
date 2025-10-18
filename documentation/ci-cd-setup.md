@@ -20,8 +20,9 @@ This framework includes pre-configured CI/CD pipelines for multiple platforms:
 ├── bdd-tests.yml          # BDD feature tests
 └── dependency-update.yml  # Automatic dependency updates
 
-.gitlab-ci.yml            # GitLab CI configuration
-Jenkinsfile               # Jenkins pipeline configuration
+ci/
+├── .gitlab-ci.yml        # GitLab CI configuration
+└── Jenkinsfile           # Jenkins pipeline configuration
 ```
 
 ---
@@ -157,7 +158,11 @@ schedule:
 
 ### Quick Start
 
-1. **Commit `.gitlab-ci.yml`** to your repository
+1. **Configure custom CI file path** in GitLab:
+   - Go to Settings → CI/CD → General pipelines
+   - Set "CI/CD configuration file" to `ci/.gitlab-ci.yml`
+   - Alternatively, create a symlink: `ln -s ci/.gitlab-ci.yml .gitlab-ci.yml`
+
 2. **Configure CI/CD variables** in GitLab
 3. **Push to GitLab** - Pipeline will start automatically
 
@@ -220,7 +225,7 @@ parallel:
    - New Item → Pipeline
    - Pipeline → Definition → Pipeline script from SCM
    - SCM → Git → Enter repository URL
-   - Script Path: `Jenkinsfile`
+   - Script Path: `ci/Jenkinsfile`
 
 3. **Configure Environment**:
    - Ensure Docker is available on Jenkins agent
@@ -248,7 +253,7 @@ CI=true
 
 #### Docker Agent
 
-The Jenkinsfile uses Playwright's Docker image:
+The `ci/Jenkinsfile` uses Playwright's Docker image:
 ```groovy
 agent {
     docker {

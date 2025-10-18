@@ -180,7 +180,7 @@ Legend:
 
 ## 🚀 Quick Start
 
-> 💡 **New to this framework?** Check out our [Getting Started Guide](GETTING_STARTED.md) for a detailed walkthrough!
+> 💡 **New to this framework?** Check out our [Getting Started Guide](documentation/getting-started.md) for a detailed walkthrough!
 > 
 > 📘 **Setting up for your project?** See [Setup Guide](documentation/setup.md) for important information about using this template.
 
@@ -247,7 +247,9 @@ playwright-e2e-bdd-framework/
 │   │   ├── dev.config.ts
 │   │   ├── staging.config.ts
 │   │   └── prod.config.ts
-│   └── playwright.config.ts     # Main Playwright config
+│   ├── playwright.config.ts     # Main Playwright config
+│   ├── playwright-bdd.config.js # BDD configuration
+│   └── tsconfig.base.json       # Base TypeScript config
 │
 ├── 📁 src/                      # Source Code
 │   ├── applications/            # Application-specific code
@@ -304,6 +306,8 @@ playwright-e2e-bdd-framework/
 │
 ├── 📁 documentation/            # Comprehensive Documentation
 │   ├── setup.md                 # Project setup guide
+│   ├── getting-started.md       # Getting started guide
+│   ├── contributing.md          # Contribution guidelines
 │   ├── configuration-guide.md   # Setup & config
 │   ├── test-execution.md        # Running tests
 │   ├── bdd-testing.md           # BDD guide
@@ -319,9 +323,15 @@ playwright-e2e-bdd-framework/
 │   ├── mcp-server/
 │   └── combined/
 │
-├── 📄 .gitlab-ci.yml            # GitLab CI pipeline
-├── 📄 Jenkinsfile               # Jenkins pipeline
+├── 📁 ci/                       # CI/CD Configurations
+│   ├── .gitlab-ci.yml           # GitLab CI pipeline
+│   ├── Jenkinsfile              # Jenkins pipeline
+│   └── README.md                # CI/CD setup guide
+│
+├── 📄 .gitignore                # Git ignore patterns
 ├── 📄 env.example               # Environment template
+├── 📄 LICENSE                   # MIT License
+├── 📄 README.md                 # This file
 ├── 📄 package.json              # Dependencies & scripts
 └── 📄 tsconfig.json             # TypeScript config
 ```
@@ -331,13 +341,14 @@ playwright-e2e-bdd-framework/
 | Folder | Purpose |
 |--------|---------|
 | `.github/workflows/` | GitHub Actions CI/CD workflows |
-| `config/` | All configuration files (apps, environments) |
+| `ci/` | GitLab CI and Jenkins pipeline configurations |
+| `config/` | All configuration files (apps, environments, TypeScript) |
+| `documentation/` | Comprehensive guides and references (setup, contributing, etc.) |
 | `src/` | Core framework code and application-specific implementations |
 | `tests/` | Traditional Playwright tests (flexible, technical) |
 | `features/` | BDD Gherkin scenarios (business-readable) |
 | `support/` | Reusable test utilities and helpers |
 | `test-data/` | Static test data files |
-| `documentation/` | Comprehensive guides and references |
 
 ## 🧪 Testing Approaches
 
@@ -445,7 +456,7 @@ git push origin main
 
 ### GitLab CI
 
-Complete pipeline configuration in `.gitlab-ci.yml`:
+Complete pipeline configuration in `ci/.gitlab-ci.yml`:
 
 ```yaml
 # Automatic parallel execution
@@ -460,7 +471,7 @@ Jenkinsfile with matrix builds:
 ```groovy
 // Configure in Jenkins:
 // New Item → Pipeline → Pipeline from SCM
-// Script Path: Jenkinsfile
+// Script Path: ci/Jenkinsfile
 ```
 
 **📖 Full Guide:** [CI/CD Setup Documentation](documentation/ci-cd-setup.md)
@@ -519,7 +530,7 @@ We welcome contributions! Whether it's:
 - 📝 Documentation improvements
 - 🧪 Test coverage enhancements
 
-Please read our [Contributing Guide](CONTRIBUTING.md) to get started.
+Please read our [Contributing Guide](documentation/contributing.md) to get started.
 
 ### Quick Contribution Steps:
 1. Fork the repository
@@ -540,8 +551,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📚 Additional Resources
 
-- 📖 [Getting Started Guide](GETTING_STARTED.md) - Quick setup in 10 minutes
-- 🤝 [Contributing Guide](CONTRIBUTING.md) - How to contribute
+- 📖 [Getting Started Guide](documentation/getting-started.md) - Quick setup in 10 minutes
+- 🤝 [Contributing Guide](documentation/contributing.md) - How to contribute
 - 📂 [Full Documentation](documentation/) - Comprehensive guides
 - 🐛 [Troubleshooting](documentation/troubleshooting.md) - Common issues and solutions
 

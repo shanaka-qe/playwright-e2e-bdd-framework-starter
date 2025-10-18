@@ -288,8 +288,8 @@ npm install
 
 3. **Set Up CI/CD**
    - GitHub Actions: `.github/workflows/`
-   - GitLab CI: `.gitlab-ci.yml`
-   - Jenkins: `Jenkinsfile`
+   - GitLab CI: `ci/.gitlab-ci.yml`
+   - Jenkins: `ci/Jenkinsfile`
 
 ### Development Workflow
 
@@ -323,7 +323,7 @@ git push origin feature/my-feature
 
 - **Questions?** Open a discussion
 - **Bugs?** Create an issue
-- **Contributions?** See [CONTRIBUTING.md](CONTRIBUTING.md)
+- **Contributions?** See [Contributing Guide](contributing.md)
 
 ## ✅ Checklist
 

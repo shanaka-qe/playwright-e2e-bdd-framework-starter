@@ -199,8 +199,8 @@ Choose one approach:
 ## 📧 Support
 
 - 📖 [Full Documentation](documentation/)
-- 🎓 [Getting Started Guide](GETTING_STARTED.md)
-- 🤝 [Contributing Guide](CONTRIBUTING.md)
+- 🎓 [Getting Started Guide](getting-started.md)
+- 🤝 [Contributing Guide](contributing.md)
 - 💬 [GitHub Discussions](https://github.com/yourusername/playwright-e2e-bdd-framework/discussions)
 
 ---

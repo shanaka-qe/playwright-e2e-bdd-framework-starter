@@ -18,8 +18,9 @@ playwright-e2e-tests/
 ├── 📁 reports/                   # Test Execution Reports
 ├── 📁 documentation/             # Framework Documentation
 ├── 📁 test-data/                 # Test Data Files
-├── 📄 .gitlab-ci.yml             # GitLab CI Pipeline ✨ NEW
-├── 📄 Jenkinsfile                # Jenkins Pipeline ✨ NEW
+├── 📁 ci/                        # CI/CD Configurations ✨ NEW
+│   ├── .gitlab-ci.yml            # GitLab CI Pipeline
+│   └── Jenkinsfile               # Jenkins Pipeline
 ├── 📄 env.example                # Environment Variables Template ✨ NEW
 ├── 📄 package.json               # Project Dependencies & Scripts
 ├── 📄 tsconfig.json              # TypeScript Configuration
@@ -341,6 +342,8 @@ reports/
 documentation/
 ├── 📄 README.md                 # Documentation index
 ├── 📄 setup.md                  # Project setup guide
+├── 📄 getting-started.md        # Getting started guide
+├── 📄 contributing.md           # Contribution guidelines
 ├── 📄 folder-structure.md       # This document
 ├── 📄 configuration-guide.md    # Configuration reference
 ├── 📄 test-execution.md         # Test running guide
@@ -353,9 +356,17 @@ documentation/
 
 ---
 
-## 📄 Root Level CI/CD Files ✨ NEW
+## 📁 `/ci/` - CI/CD Configurations ✨ NEW
 
-### `.gitlab-ci.yml` - GitLab CI Pipeline
+**Purpose**: Centralized CI/CD pipeline configurations for different platforms.
+
+```
+ci/
+├── 📄 .gitlab-ci.yml            # GitLab CI configuration
+└── 📄 Jenkinsfile               # Jenkins pipeline configuration
+```
+
+### `ci/.gitlab-ci.yml` - GitLab CI Pipeline
 
 **Purpose**: Complete GitLab CI/CD pipeline configuration with caching and parallel execution.
 
@@ -372,9 +383,7 @@ documentation/
 3. **Test**: Smoke, regression, cross-browser, and BDD tests
 4. **Report**: Generate and publish test reports
 
----
-
-### `Jenkinsfile` - Jenkins Pipeline
+### `ci/Jenkinsfile` - Jenkins Pipeline
 
 **Purpose**: Jenkins declarative pipeline with matrix builds and parallel execution.
 
@@ -424,8 +433,9 @@ cp env.example .env
 | What you need | Where to look |
 |---------------|---------------|
 | CI/CD workflows | `.github/workflows/` ✨ |
-| GitLab CI config | `.gitlab-ci.yml` ✨ |
-| Jenkins pipeline | `Jenkinsfile` ✨ |
+| CI/CD configs | `ci/` folder ✨ |
+| GitLab CI config | `ci/.gitlab-ci.yml` ✨ |
+| Jenkins pipeline | `ci/Jenkinsfile` ✨ |
 | Environment template | `env.example` ✨ |
 | Application config | `config/applications/` |
 | Environment settings | `config/environments/` |
