@@ -62,7 +62,6 @@
     "typescript",
     "test-framework"
   ],
-  "author": "Your Team",
   "license": "MIT",
   "type": "commonjs",
   "devDependencies": {
@@ -81,10 +80,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/playwright-e2e-bdd-framework.git"
+    "url": "https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/playwright-e2e-bdd-framework/issues"
+    "url": "https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/issues"
   },
-  "homepage": "https://github.com/yourusername/playwright-e2e-bdd-framework#readme"
+  "homepage": "https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter#readme"
 }
