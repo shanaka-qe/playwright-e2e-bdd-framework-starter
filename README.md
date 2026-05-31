@@ -187,7 +187,7 @@ Legend:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/playwright-e2e-bdd-framework.git
+git clone https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter.git
 cd playwright-e2e-bdd-framework
 ```
 
@@ -558,10 +558,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- 📧 **Email**: your-qa-team@example.com
+- 🐛 **Report Issues**: [GitHub Issues](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/issues)
 - 📚 **Documentation**: `/documentation/`
-- 🐛 **Issues**: [GitHub Issues](https://github.com/yourusername/playwright-e2e-bdd-framework/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/yourusername/playwright-e2e-bdd-framework/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/discussions)
 
 ---
 

@@ -37,7 +37,7 @@ The template includes example test files that reference actual application imple
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/playwright-e2e-bdd-framework.git
+git clone https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter.git
 cd playwright-e2e-bdd-framework
 
 # 2. Install dependencies
@@ -201,7 +201,7 @@ Choose one approach:
 - 📖 [Full Documentation](documentation/)
 - 🎓 [Getting Started Guide](getting-started.md)
 - 🤝 [Contributing Guide](contributing.md)
-- 💬 [GitHub Discussions](https://github.com/yourusername/playwright-e2e-bdd-framework/discussions)
+- 💬 [GitHub Discussions](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/discussions)
 
 ---
 

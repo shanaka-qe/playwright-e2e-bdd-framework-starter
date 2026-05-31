@@ -42,7 +42,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 2. **Clone your fork**
    ```bash
-   git clone https://github.com/yourusername/playwright-e2e-bdd-framework.git
+   git clone https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter.git
    cd playwright-e2e-bdd-framework
    ```
 
@@ -80,7 +80,7 @@ We welcome various types of contributions:
 ### Reporting Bugs
 
 Before creating a bug report:
-1. Check if the bug has already been reported in [Issues](https://github.com/yourusername/playwright-e2e-bdd-framework/issues)
+1. Check if the bug has already been reported in [Issues](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/issues)
 2. Ensure you're using the latest version
 3. Verify the bug is reproducible
 
@@ -350,8 +350,8 @@ Closes #(issue number)
 
 ## 🆘 Getting Help
 
-- **Questions?** Open a [Discussion](https://github.com/yourusername/playwright-e2e-bdd-framework/discussions)
-- **Bugs?** Open an [Issue](https://github.com/yourusername/playwright-e2e-bdd-framework/issues)
+- **Questions?** Open a [Discussion](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/discussions)
+- **Bugs?** Open an [Issue](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/issues)
 - **Chat?** Join our community (if applicable)
 
 ## 📚 Additional Resources

@@ -24,7 +24,7 @@ git --version   # Any recent version
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/playwright-e2e-bdd-framework.git
+git clone https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter.git
 cd playwright-e2e-bdd-framework
 ```
 
@@ -316,8 +316,8 @@ git push origin feature/my-feature
 
 - 📖 [Full Documentation](documentation/)
 - 🐛 [Troubleshooting Guide](documentation/troubleshooting.md)
-- 💬 [GitHub Discussions](https://github.com/yourusername/playwright-e2e-bdd-framework/discussions)
-- 🐞 [Report Issues](https://github.com/yourusername/playwright-e2e-bdd-framework/issues)
+- 💬 [GitHub Discussions](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/discussions)
+- 🐞 [Report Issues](https://github.com/shanaka-qe/playwright-e2e-bdd-framework-starter/issues)
 
 ### Community
 
