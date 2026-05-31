@@ -4,6 +4,10 @@ playwright-report/
 temp/
 reports/*/html-report/
 reports/*/artifacts/
+reports/*/results.json
+reports/*/junit-results.xml
+reports/*/*.xml
+reports/*/*.json
 
 # System files
 .DS_Store
